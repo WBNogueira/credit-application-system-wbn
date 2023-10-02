@@ -4,7 +4,7 @@ import jakarta.persistence.*
 import java.math.BigDecimal
 
 @Entity
-@Table(name = "Cliente")
+@Table(name = "customer")
 data class Customer(
     @Column(nullable = false) var firstName: String =  "",
     @Column(nullable = false) var lastName: String = "",

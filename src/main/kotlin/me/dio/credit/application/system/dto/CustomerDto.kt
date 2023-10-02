@@ -13,7 +13,7 @@ data class CustomerDto(
     val email: String,
     val password: String,
     val zipcode: String,
-    val street: String,
+    val street: String
 ) {
 
     fun toEntity(): Customer = Customer(
