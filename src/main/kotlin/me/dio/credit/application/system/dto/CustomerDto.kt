@@ -15,7 +15,7 @@ data class CustomerDto(
     @field:NotNull(message = "Income is required") val income: BigDecimal,
     @field:NotEmpty(message = "Email is required") @field:Email(message = "Email is invalid") val email: String,
     @field:NotEmpty(message = "Password is required") val password: String,
-    @field:NotEmpty(message = "Zipcode is required") val zipcode: String,
+    @field:NotEmpty(message = "Zipcode is required") val zipCode: String,
     @field:NotEmpty(message = "Street is required") val street: String
 ) {
 
@@ -27,7 +27,7 @@ data class CustomerDto(
         email = this.email,
         password = this.password,
         address = Address(
-            zipCode = this.zipcode,
+            zipCode = this.zipCode,
             street = this.street
         )
     )
