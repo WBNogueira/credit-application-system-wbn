@@ -49,7 +49,6 @@ class CustomerResourceTest {
             .content(valueAsString))
             .andExpect(MockMvcResultMatchers.status().isCreated())
 
-            .andExpect(MockMvcResultMatchers.status().isCreated)
             .andExpect(MockMvcResultMatchers.jsonPath("$.firstName").value("Wagner"))
             .andExpect(MockMvcResultMatchers.jsonPath("$.lastName").value("Nogueira"))
             .andExpect(MockMvcResultMatchers.jsonPath("$.cpf").value("28572444017"))
@@ -238,7 +237,7 @@ class CustomerResourceTest {
             .andExpect(MockMvcResultMatchers.jsonPath("$.details[*]").isNotEmpty)
             .andDo(MockMvcResultHandlers.print())
     }
-    private fun builderCustomerDto(
+    fun builderCustomerDto(
         firstName: String = "Wagner",
         lastName: String = "Nogueira",
         cpf: String = "28572444017",
